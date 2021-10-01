@@ -1,4 +1,4 @@
-package com.droolsBoot.service;
+package com.droolsboot.service;
 
 import org.kie.api.KieBase;
 import org.kie.api.io.ResourceType;

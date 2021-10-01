@@ -1,4 +1,4 @@
-package com.droolsBoot.util;
+package com.droolsboot.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package com.droolsBoot.util;
+package com.droolsboot.util;
 
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -9,7 +9,7 @@ import org.stringtemplate.v4.STGroupString;
 import java.util.Date;
 import java.util.UUID;
 
-import static com.droolsBoot.util.LossMoneyTemplate.workMoneyST;
+import static com.droolsboot.util.LossMoneyTemplate.workMoneyST;
 
 
 /**

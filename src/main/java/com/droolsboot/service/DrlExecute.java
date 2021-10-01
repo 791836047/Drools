@@ -1,8 +1,8 @@
-package com.droolsBoot.service;
+package com.droolsboot.service;
 
 
-import com.droolsBoot.model.PromoteExecute;
-import com.droolsBoot.model.RuleResult;
+import com.droolsboot.model.PromoteExecute;
+import com.droolsboot.model.RuleResult;
 import org.kie.internal.command.CommandFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

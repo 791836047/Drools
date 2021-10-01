@@ -1,14 +1,12 @@
-package com.droolsBoot.controller;
+package com.droolsboot.controller;
 
-import com.droolsBoot.service.PromoteEdieService;
+import com.droolsboot.service.PromoteEdieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import java.util.Map;
-
 
 @Controller
 @RequestMapping("/promotion")
@@ -17,18 +15,15 @@ public class ShopController {
     @Autowired
     private PromoteEdieService promoteEdieService;
 
-
     @RequestMapping("/greeting")
     public String greeting() {
         return "index";
     }
 
-
     @RequestMapping("/shop")
     public String shop() {
         return "shopping";
     }
-
 
     /**
      * 编辑促销活动

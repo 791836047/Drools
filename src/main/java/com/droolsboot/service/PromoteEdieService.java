@@ -1,11 +1,11 @@
-package com.droolsBoot.service;
+package com.droolsboot.service;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.droolsBoot.dao.PromoteExecuteDao;
-import com.droolsBoot.model.PromoteExecute;
-import com.droolsBoot.model.RuleResult;
-import com.droolsBoot.util.UUIDUtil;
+import com.droolsboot.dao.PromoteExecuteDao;
+import com.droolsboot.model.PromoteExecute;
+import com.droolsboot.model.RuleResult;
+import com.droolsboot.util.UUIDUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

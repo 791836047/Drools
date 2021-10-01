@@ -1,11 +1,11 @@
-package com.droolsBoot.model;
+package com.droolsboot.model;
 
 import org.kie.api.KieBase;
 import org.kie.api.runtime.StatelessKieSession;
 
 import java.util.List;
 
-import static com.droolsBoot.service.NewKieBase.rulekieBase;
+import static com.droolsboot.service.NewKieBase.rulekieBase;
 
 
 public class PromoteExecute {

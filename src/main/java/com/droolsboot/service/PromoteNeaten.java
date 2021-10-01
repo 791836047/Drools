@@ -1,7 +1,7 @@
-package com.droolsBoot.service;
+package com.droolsboot.service;
 
 
-import com.droolsBoot.model.PromoteExecute;
+import com.droolsboot.model.PromoteExecute;
 import org.springframework.stereotype.Service;
 
 /**

@@ -1,6 +1,6 @@
-package com.droolsBoot.dao;
+package com.droolsboot.dao;
 
-import com.droolsBoot.model.PromoteExecute;
+import com.droolsboot.model.PromoteExecute;
 import org.springframework.stereotype.Repository;
 
 @Repository

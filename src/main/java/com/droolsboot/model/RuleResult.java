@@ -1,4 +1,4 @@
-package com.droolsBoot.model;
+package com.droolsboot.model;
 
 import java.util.ArrayList;
 import java.util.List;
