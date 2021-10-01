@@ -1,5 +1,6 @@
 package com.droolsboot.model;
 
+import lombok.Data;
 import org.kie.api.KieBase;
 import org.kie.api.runtime.StatelessKieSession;
 
@@ -7,17 +8,31 @@ import java.util.List;
 
 import static com.droolsboot.service.NewKieBase.rulekieBase;
 
-
+/**
+ * 此类是Drools的工具类，用来存放规则库、规则会话、规则内容等，使其更方便地管理和使用。
+ * @author liaowenhui
+ */
+//@Data
 public class PromoteExecute {
-    //促销编号：
+    /**
+     * 促销编号
+     */
     private String promoteCode;
-    //业务Kbase
+    /**
+     *业务Kbase
+     */
     private KieBase workKbase;
-    //业务session
+    /**
+     * 业务session
+      */
     private StatelessKieSession workSession;
-    //规则内容
-    private String WorkContent;
-    //促销规则名称：
+    /**
+     * 规则内容
+     */
+    private String workContent;
+    /**
+     * 促销规则名称
+      */
     private List<String> ruleName;
 
     private String promoteName;
@@ -31,11 +46,11 @@ public class PromoteExecute {
     }
 
     public String getWorkContent() {
-        return WorkContent;
+        return workContent;
     }
 
     public void setWorkContent(String workContent) {
-        WorkContent = workContent;
+        this.workContent = workContent;
     }
 
     public List<String> getRuleName() {

@@ -5,11 +5,10 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.stringtemplate.v4.ST;
 import org.stringtemplate.v4.STGroup;
 import org.stringtemplate.v4.STGroupString;
-
 import java.util.Date;
 import java.util.UUID;
 
-import static com.droolsboot.util.LossMoneyTemplate.workMoneyST;
+import static com.droolsboot.util.LossMoneyTemplate.WORK_MONEY_ST;
 
 
 /**
@@ -61,9 +60,8 @@ public class UUIDUtil {
      */
     public static String typeJoinTime() {
         String dateNowStr = StringJointUtil.dateToStringThree(new Date());
-        Integer math = (int) ((Math.random() * 9 + 1) * 1000000);
-        String code = dateNowStr.concat(math.toString());
-        return code;
+        int math = (int) ((Math.random() * 9 + 1) * 1000000);
+        return dateNowStr.concat(Integer.toString(math));
 
     }
 
@@ -76,7 +74,7 @@ public class UUIDUtil {
      * 规则业务生成
      */
     public static String ruleWordExchangsST(String json) {
-        STGroup group = new STGroupString(workMoneyST);
+        STGroup group = new STGroupString(WORK_MONEY_ST);
         ST stFile = group.getInstanceOf("wordImport");
         ST stRule = group.getInstanceOf("ruleValue");
         JSONObject jsonObject = JSONObject.parseObject(json);

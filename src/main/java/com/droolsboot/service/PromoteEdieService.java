@@ -15,6 +15,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 该类是业务层的服务器，主要负责生成优惠卷、使用优惠卷、计算结果等。
+ * @author liaowenhui
+ */
 @Service
 public class PromoteEdieService {
 
@@ -28,7 +32,7 @@ public class PromoteEdieService {
     /**
      * 生成优惠券
      */
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public void ediePromomteMap(String money, String rulename) {
         if (this.promoteExecuteMap == null) {
             promoteExecuteMap = new HashMap<>();

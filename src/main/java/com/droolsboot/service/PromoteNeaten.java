@@ -22,7 +22,8 @@ public class PromoteNeaten {
      */
     public PromoteExecute editRule(String rule) throws RuntimeException {
         PromoteExecute promoteExecute = new PromoteExecute();
-        promoteExecute.setWorkContent(rule);//促销业务规则
+        //促销业务规则
+        promoteExecute.setWorkContent(rule);
         //规则库 初始化
         promoteExecute.getWorkSession();
         return promoteExecute;

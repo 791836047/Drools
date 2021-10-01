@@ -1,18 +1,24 @@
 package com.droolsboot.model;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * describe: 返回值实体
  *
- * @author laizhihui
- * @date 2018/04/19
  */
+//@Data
 public class RuleResult {
-    //参活商品优惠后的价格
+    /**
+     * 参活商品优惠后的价格
+     */
     private double finallyMoney;
-    //参加活动的名称
+
+    /**
+     * 返回优惠前的价格
+     */
     private double moneySum;
 
     public double getMoneySum() {

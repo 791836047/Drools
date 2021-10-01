@@ -1,16 +1,15 @@
 package com.droolsboot.util;
 
 /**
- * describe:
- *
- * @author laizhihui
- * @date 2018/04/25
+ * describe: 此类是一个规则模板工具类，通过传参数即可生产规则内容，
+ * 将规则内容存放在数据库或者生产规则文件，为规则库的构建设定基础。
+ * @author 廖文辉
  */
 public class LossMoneyTemplate {
-    public static final String workMoneyST = "wordImport(rules) ::=<<\n" +
+    public static final String WORK_MONEY_ST = "wordImport(rules) ::=<<\n" +
             "package com.promote\n" +
             "\n" +
-            "import\tcom.droolsBoot.model.RuleResult;\n" +
+            "import\tcom.droolsboot.model.RuleResult;\n" +
             "<rules; separator=\"\\n\\n\">\n" +
             ">>\n" +
             "\n" +

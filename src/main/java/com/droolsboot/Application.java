@@ -8,6 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
+/**
+ * @author liaowenhui
+ */
 @SpringBootApplication
 @EnableTransactionManagement
 @MapperScan("com.droolsBoot.dao")

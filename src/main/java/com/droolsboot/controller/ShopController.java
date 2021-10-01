@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.Map;
 
+/**
+ * @author liaowenhui
+ */
 @Controller
 @RequestMapping("/promotion")
 public class ShopController {
@@ -44,8 +47,7 @@ public class ShopController {
     @RequestMapping(value = "/toShopping", method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
     public Map<String, Object> toShopping(String money) {
-        Map<String, Object> data = promoteEdieService.toShopping(money);
-        return data;
+        return promoteEdieService.toShopping(money);
     }
 
 }

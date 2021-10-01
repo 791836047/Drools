@@ -11,7 +11,7 @@ import java.text.DecimalFormat;
 import java.util.*;
 
 /**
- * describe: 规则工具类
+ * describe: 规则工具类,将规则操作单独写一个工具类，方便扩展和管理
  *
  * @author laizhihui
  */
@@ -27,7 +27,8 @@ public class DrlExecute {
         // 判断业务规则是否存在
         RuleResult ruleresult = new RuleResult();
         //统计所有参活商品的件数和金额
-        ruleresult.setMoneySum(moneySum);//返回优惠前的价格
+        //返回优惠前的价格
+        ruleresult.setMoneySum(moneySum);
         logger.info("优惠前的价格" + moneySum);
         //统计完成后再将参数insert到促销规则中
         List cmdCondition = new ArrayList<>();

@@ -16,7 +16,7 @@
     values
     (
     #{promoteCode},
-    #{WorkContent},
+    #{workContent},
     #{promoteName}
     )
 </insert>

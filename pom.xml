@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.droolsBoot</groupId>
-    <artifactId>droolsBoot</artifactId>
+    <groupId>com.droolsboot</groupId>
+    <artifactId>droolsboot</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -84,6 +84,12 @@
             <version>1.3.2</version>
         </dependency>
 
+        <!--lombok插件-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
@@ -93,6 +99,10 @@
             <groupId>org.antlr</groupId>
             <artifactId>ST4</artifactId>
             <version>4.0.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
     <build>
