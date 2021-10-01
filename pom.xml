@@ -52,13 +52,13 @@
         </dependency>
 
         <!--以下是自己添加的相关依赖-->
-        <!-- 支持热部署-->
-        <dependency>
+        <!-- 支持热部署，在Drools中不要使用热部署，会造成问题......-->
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-            <!-- 这个需要为 true 热部署才有效 -->
+            &lt;!&ndash; 这个需要为 true 热部署才有效 &ndash;&gt;
             <optional>true</optional>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
