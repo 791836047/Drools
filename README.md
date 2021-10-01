@@ -1,2 +1,6 @@
-# DroolsSpringBoot
-《Drools7.10权威指南》测试用例  整合SpringBoot
+# Drools整合SpringBoot 针对电商平台优惠券的动态添加。
+ 
+注意点：
+（1）使用Drools时，不要使用Spring Boot的热部署，会造成规则库生成失败，经常出现的空指针问题。
+其原因是规则库在构建时会在系统数据库中生成一个.class的规则类文件，这时Spring Boot会认为项目发生了变化，
+热部署会被激活。从而将已经加载或者初始化好的规则库再次清空或再次初始化。

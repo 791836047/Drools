@@ -35,8 +35,9 @@ public class ShopController {
      */
     @RequestMapping(value = "/ediePromote", method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
-    public void addPromote(String money, String rulename) {
+    public String addPromote(String money, String rulename) {
         promoteEdieService.ediePromomteMap(money, rulename);
+        return "添加优惠券成功";
     }
 
     /**

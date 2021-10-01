@@ -70,8 +70,9 @@ public class PromoteEdieService {
                 pn.add(ruleResult);
             }
         }
-        map.put("moneySumYuanJia",moneySum);
-        map.put("youhuiquanjiegou", pn);
+        map.put("原价为",moneySum);
+        map.put("最终支付金额为:",v);
+        map.put("使用的优惠券如下:", pn);
         return map;
     }
 
