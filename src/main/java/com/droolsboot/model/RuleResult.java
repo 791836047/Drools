@@ -8,8 +8,9 @@ import java.util.List;
 /**
  * describe: 返回值实体
  *
+ * @author liaowenhui
  */
-//@Data
+@Data
 public class RuleResult {
     /**
      * 参活商品优惠后的价格
@@ -21,22 +22,10 @@ public class RuleResult {
      */
     private double moneySum;
 
-    public double getMoneySum() {
-        return moneySum;
-    }
-    public void setMoneySum(double moneySum) {
-        this.moneySum = moneySum;
-    }
+    /**
+     * 促销活动名称
+     */
     private List<String> promoteName = new ArrayList<>();
-
-
-    public double getFinallyMoney() {
-        return finallyMoney;
-    }
-
-    public void setFinallyMoney(double finallyMoney) {
-        this.finallyMoney = finallyMoney;
-    }
 
     public List<String> getPromoteName() {
         return promoteName;

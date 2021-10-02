@@ -3,7 +3,7 @@
 <mapper namespace="com.droolsboot.dao.PromoteExecuteDao">
 <resultMap id="BaseResultMap" type="com.droolsboot.model.PromoteExecute">
     <result column="promote_code" property="promoteCode" jdbcType="VARCHAR"/>
-    <result column="promote_rule" property="WorkContent" jdbcType="VARCHAR"/>
+    <result column="promote_rule" property="workContent" jdbcType="VARCHAR"/>
     <result column="promote_name" property="promoteName" jdbcType="VARCHAR"/>
 </resultMap>
 

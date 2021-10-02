@@ -29,14 +29,12 @@ public class ShopController {
     }
 
     /**
-     * 编辑促销活动
-     *
-     * @return 结果
+     * 促销活动--添加优惠劵
      */
     @RequestMapping(value = "/ediePromote", method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
-    public String addPromote(String money, String rulename) {
-        promoteEdieService.ediePromomteMap(money, rulename);
+    public String ediePromote(String money, String ruleName) {
+        promoteEdieService.ediePromomteMap(money, ruleName);
         return "添加优惠券成功";
     }
 

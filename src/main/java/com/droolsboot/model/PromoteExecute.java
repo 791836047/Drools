@@ -12,7 +12,7 @@ import static com.droolsboot.service.NewKieBase.rulekieBase;
  * 此类是Drools的工具类，用来存放规则库、规则会话、规则内容等，使其更方便地管理和使用。
  * @author liaowenhui
  */
-//@Data
+@Data
 public class PromoteExecute {
     /**
      * 促销编号
@@ -30,45 +30,8 @@ public class PromoteExecute {
      * 规则内容
      */
     private String workContent;
-    /**
-     * 促销规则名称
-      */
-    private List<String> ruleName;
 
     private String promoteName;
-
-    public String getPromoteName() {
-        return promoteName;
-    }
-
-    public void setPromoteName(String promoteName) {
-        this.promoteName = promoteName;
-    }
-
-    public String getWorkContent() {
-        return workContent;
-    }
-
-    public void setWorkContent(String workContent) {
-        this.workContent = workContent;
-    }
-
-    public List<String> getRuleName() {
-        return ruleName;
-    }
-
-    public void setRuleName(List<String> ruleName) {
-        this.ruleName = ruleName;
-    }
-
-
-    public String getPromoteCode() {
-        return promoteCode;
-    }
-
-    public void setPromoteCode(String promoteCode) {
-        this.promoteCode = promoteCode;
-    }
 
     public KieBase getWorkKbase() {
         if (this.workKbase == null) {
