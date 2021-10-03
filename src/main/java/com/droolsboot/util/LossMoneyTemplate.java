@@ -20,8 +20,8 @@ public class LossMoneyTemplate {
             "\t\t    $r:RuleResult(true)\n" +
             " \t\tthen\n" +
             "           modify($r){\n" +
-            "                setPromoteName(drools.getRule().getName())<if(action)>,\n" +
-            "                setFinallyMoney($r.getMoneySum() - <action.money><endif>)\n" +
+            "                setPromoteName(drools.getRule().getName()),\n" +
+            "   <if(action)>setFinallyMoney($r.getMoneySum() - <action.money><endif>)\n" +
             "           }\n" +
             "end\n" +
             ">>\n";

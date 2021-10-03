@@ -73,6 +73,7 @@ public class UUIDUtil {
 
     /**
      * 规则业务生成
+     * json示例：{"condition":{},"rule":{"name":"78元优惠券"},"action":{"money":78.0}}
      */
     public static String ruleWordExchangsST(String json) {
         STGroup group = new STGroupString(WORK_MONEY_ST);
@@ -87,7 +88,6 @@ public class UUIDUtil {
         stRule.add("action", action);
         stRule.add("rule", rule);
         stFile.add("rules", stRule);
-        String result = stFile.render();
-        return result;
+        return stFile.render();
     }
 }

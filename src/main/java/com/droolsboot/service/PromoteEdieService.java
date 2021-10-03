@@ -80,6 +80,7 @@ public class PromoteEdieService {
 
     /**
      * 组合业务规则Json方法
+     * 返回示例：{"condition":{},"rule":{"name":"78元优惠券"},"action":{"money":78.0}}
      *
      * @return 结果
      */
