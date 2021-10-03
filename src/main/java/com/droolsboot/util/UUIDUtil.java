@@ -12,10 +12,7 @@ import static com.droolsboot.util.LossMoneyTemplate.WORK_MONEY_ST;
 
 
 /**
- * describe:
- *
- * @author laizhihui
- * @date 2018/03/07
+ * @author liaowenhui
  */
 public class UUIDUtil {
 
@@ -54,7 +51,7 @@ public class UUIDUtil {
     }
 
     /**
-     * 生成不重复促销编码
+     * 生成不重复的优惠券编码
      *
      * @return
      */
@@ -65,9 +62,13 @@ public class UUIDUtil {
 
     }
 
+    /**
+     * 使用StringTemplate模板拼接规则内容
+     * @param json
+     * @return
+     */
     public static String rule(String json) {
-        String rule = ruleWordExchangsST(json);
-        return rule;
+        return ruleWordExchangsST(json);
     }
 
     /**
@@ -77,6 +78,7 @@ public class UUIDUtil {
         STGroup group = new STGroupString(WORK_MONEY_ST);
         ST stFile = group.getInstanceOf("wordImport");
         ST stRule = group.getInstanceOf("ruleValue");
+
         JSONObject jsonObject = JSONObject.parseObject(json);
         JSONObject condition = jsonObject.getJSONObject("condition");
         JSONObject action = jsonObject.getJSONObject("action");

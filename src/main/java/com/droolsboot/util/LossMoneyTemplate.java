@@ -1,7 +1,7 @@
 package com.droolsboot.util;
 
 /**
- * describe: 此类是一个规则模板工具类，通过传参数即可生产规则内容，
+ * describe: 此类是一个StringTemplate模板工具类，通过传参数即可生成规则内容，
  * 将规则内容存放在数据库或者生产规则文件，为规则库的构建设定基础。
  * @author 廖文辉
  */

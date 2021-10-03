@@ -4,8 +4,6 @@ import lombok.Data;
 import org.kie.api.KieBase;
 import org.kie.api.runtime.StatelessKieSession;
 
-import java.util.List;
-
 import static com.droolsboot.service.NewKieBase.rulekieBase;
 
 /**

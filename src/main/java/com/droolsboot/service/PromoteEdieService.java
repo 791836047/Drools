@@ -33,17 +33,19 @@ public class PromoteEdieService {
      * 生成优惠券
      */
     @Transactional(rollbackFor = Exception.class)
-    public void ediePromomteMap(String money, String rulename) {
+    public void ediePromomteMap(String money, String ruleName) {
         if (this.promoteExecuteMap == null) {
             promoteExecuteMap = new HashMap<>();
         }
         PromoteExecute promoteExecute = new PromoteExecute();
         double v = Double.parseDouble(money);
-        String rule = UUIDUtil.rule(ruleWorkMap(rulename, v));
+        //拼接规则语法
+        String rule = UUIDUtil.rule(ruleWorkMap(ruleName, v));
+        //生成不重复的优惠券编码 eg:202110026753782
         String promoteCode = UUIDUtil.typeJoinTime();
         promoteExecute.setPromoteCode(promoteCode);
         promoteExecute.setWorkContent(rule);
-        promoteExecute.setPromoteName(rulename);
+        promoteExecute.setPromoteName(ruleName);
         //插入优惠券
         int i = promoteExecuteDao.insertPromoteExecute(promoteExecute);
         if (i > 0) {
