@@ -6,9 +6,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * describe: 查询业务类
- *
- * @author laizhihui
- * @date 2018/03/01
+ * @author liaowenhui
  */
 
 @Service

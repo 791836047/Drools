@@ -72,8 +72,8 @@ public class UUIDUtil {
     }
 
     /**
-     * 规则业务生成
-     * json示例：{"condition":{},"rule":{"name":"78元优惠券"},"action":{"money":78.0}}
+     * 使用StringTemplate模板生成规则业务
+     * 请求参数json示例：{"condition":{},"rule":{"name":"78元优惠券"},"action":{"money":78.0}}
      */
     public static String ruleWordExchangsST(String json) {
         STGroup group = new STGroupString(WORK_MONEY_ST);

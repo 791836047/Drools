@@ -37,18 +37,20 @@ public class PromoteEdieService {
         if (this.promoteExecuteMap == null) {
             promoteExecuteMap = new HashMap<>();
         }
-        PromoteExecute promoteExecute = new PromoteExecute();
         double v = Double.parseDouble(money);
         //拼接规则语法
         String rule = UUIDUtil.rule(ruleWorkMap(ruleName, v));
         //生成不重复的优惠券编码 eg:202110026753782
         String promoteCode = UUIDUtil.typeJoinTime();
+
+        PromoteExecute promoteExecute = new PromoteExecute();
         promoteExecute.setPromoteCode(promoteCode);
         promoteExecute.setWorkContent(rule);
         promoteExecute.setPromoteName(ruleName);
         //插入优惠券
-        int i = promoteExecuteDao.insertPromoteExecute(promoteExecute);
-        if (i > 0) {
+        int insertCount = promoteExecuteDao.insertPromoteExecute(promoteExecute);
+        if (insertCount > 0) {
+            //初始化规则
             PromoteExecute execute = promoteNeaten.editRule(rule);
             this.promoteExecuteMap.put(promoteCode, execute);
         }
@@ -56,8 +58,6 @@ public class PromoteEdieService {
 
     /**
      * 购物车计算
-     *
-     * @return
      */
     public Map<String, Object> toShopping(String moneySum) {
         //购物车请求信息
@@ -65,7 +65,7 @@ public class PromoteEdieService {
         double v = Double.parseDouble(moneySum);
         List<Object> pn = new ArrayList<>();
         if (this.promoteExecuteMap != null) {
-            //证明有优惠券
+            //不为空，说明有优惠券
             for (Map.Entry<String, PromoteExecute> codes : this.promoteExecuteMap.entrySet()) {
                 RuleResult ruleResult = DrlExecute.rulePromote(codes.getValue(), v);
                 v = ruleResult.getFinallyMoney();
