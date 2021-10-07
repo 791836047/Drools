@@ -10,7 +10,9 @@ import org.kie.internal.utils.KieHelper;
  */
 public class NewKieBase {
     /**
-     * 将业务规则写到规则库中
+     * 创建KieBase
+     * KieBase是一个规则库，包含若干的规则、流程、函数等，Kie本身并不包含运行时的相关数据，如果需要执行KieBase中的规则，
+     * 就需要根据KieBase创建KieSession。一般情况都是直接根据KieContainer创建的。KieBase可以对规则进行基本操作，如删除规则、删除查询、删除函数等。
      * @param rule
      * @return
      */
@@ -18,6 +20,7 @@ public class NewKieBase {
         KieHelper helper = new KieHelper();
         try {
             helper.addContent(rule, ResourceType.DRL);
+            //底层根据KieContainer创建
             return helper.build();
         } catch (Exception e) {
             e.printStackTrace();

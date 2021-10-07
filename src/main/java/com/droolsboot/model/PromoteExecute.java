@@ -49,7 +49,14 @@ public class PromoteExecute {
         return workSession;
     }
 
+    /**
+     * 创建无状态的KieSession
+     * 说明：kieSession是一个与Drools引擎打交道的会话，基于KieBase创建，它包括运行时数据以及Fact事实对象，
+     * 并对运行时数据事实进行规则运算。通过KieContainer创建KieSession是一种较为方便的做法，
+     * 其本质上是从KieBase中创建出来的，且默认是一个有状态的。分为有状态与无状态两种KieSession。
+     */
     public void setWorkSession() {
+        //通过KieBase创建KieSession
         if (null != this.getWorkKbase()) {
             this.workSession = this.getWorkKbase().newStatelessKieSession();
         }

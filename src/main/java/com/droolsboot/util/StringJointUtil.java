@@ -3,6 +3,9 @@ package com.droolsboot.util;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * @author liaowenhui
+ */
 public class StringJointUtil {
     private final static SimpleDateFormat sdfOne = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     private final static SimpleDateFormat sdfTwo = new SimpleDateFormat("yyyy-MM");

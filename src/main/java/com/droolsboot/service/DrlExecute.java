@@ -28,8 +28,7 @@ public class DrlExecute {
         //返回优惠前的价格
         ruleresult.setMoneySum(moneySum);
         logger.info("优惠前的价格为:" + moneySum);
-        //统计完成后再将参数insert到促销规则中
-        //TODO 这里为什么需要批量执行？
+        //统计完成后再将参数insert到促销规则中，无状态的KieSession，insert多个对象的方法。
         List cmdCondition = new ArrayList<>();
         cmdCondition.add(CommandFactory.newInsert(ruleresult));
         promoteExecute.getWorkSession().execute(CommandFactory.newBatchExecution(cmdCondition));
